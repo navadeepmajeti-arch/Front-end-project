@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #222;
+}
+
+
+/* NAVBAR */
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+
+    padding: 18px 6%;
+    background: #111827;
+    color: white;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff4757;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #ff4757;
+}
+
+#userDisplay {
+    text-align: right;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height: 500px;
+
+    display: grid;
+    place-items: center;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #111827,
+        #374151
+    );
+
+    color: white;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+
+/* BUTTON */
+
+button {
+    background: #ff4757;
+    color: white;
+
+    border: none;
+    padding: 12px 25px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+button:hover {
+    background: #e63946;
+}
+
+
+/* GENERAL SECTION */
+
+.section {
+    padding: 60px 7%;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* SEARCH */
+
+#searchBox {
+    display: block;
+
+    width: 80%;
+    max-width: 500px;
+
+    margin: 0 auto 30px;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+/* EVENTS - CSS GRID */
+
+.events-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+
+/* EVENT CARD */
+
+.event-card {
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-image {
+
+    height: 160px;
+
+    display: grid;
+    place-items: center;
+
+    background: #e5e7eb;
+
+    border-radius: 8px;
+
+    font-size: 50px;
+
+    margin-bottom: 15px;
+}
+
+.event-card h3 {
+    margin-bottom: 10px;
+}
+
+.event-card p {
+    margin: 7px 0;
+}
+
+
+/* FORM */
+
+.form-section {
+
+    max-width: 500px;
+
+    margin: auto;
+}
+
+form {
+
+    display: grid;
+
+    gap: 15px;
+}
+
+form input {
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+}
+
+
+/* SEATS */
+
+.screen {
+
+    width: 80%;
+
+    margin: 30px auto;
+
+    padding: 10px;
+
+    text-align: center;
+
+    background: #333;
+
+    color: white;
+
+    border-radius: 5px;
+}
+
+
+.seat-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 50px);
+
+    justify-content: center;
+
+    gap: 12px;
+
+    margin: 30px;
+}
+
+.seat {
+
+    width: 50px;
+    height: 45px;
+
+    display: grid;
+    place-items: center;
+
+    background: #22c55e;
+
+    color: white;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+}
+
+.seat.selected {
+    background: #f59e0b;
+}
+
+.seat.booked {
+    background: #6b7280;
+    cursor: not-allowed;
+}
+
+
+/* BOOKING SUMMARY */
+
+.booking-summary {
+
+    max-width: 500px;
+
+    margin: auto;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    display: grid;
+
+    gap: 15px;
+}
+
+
+/* BOOKINGS */
+
+.booking-card {
+
+    background: white;
+
+    padding: 20px;
+
+    margin: 15px auto;
+
+    max-width: 700px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+}
+
+
+/* DIGITAL TICKET */
+
+.ticket {
+
+    max-width: 600px;
+
+    margin: auto;
+
+    background: white;
+
+    border: 2px dashed #ff4757;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    display: grid;
+
+    gap: 12px;
+}
+
+
+/* FOOTER */
+
+footer {
+
+    background: #111827;
+
+    color: white;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+
+/* HIDDEN */
+
+.hidden {
+    display: none;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 800px) {
+
+    header {
+
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+    nav {
+        flex-wrap: wrap;
+    }
+
+    #userDisplay {
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .seat-grid {
+        grid-template-columns:
+            repeat(5, 40px);
+    }
+
+    .seat {
+        width: 40px;
+        height: 40px;
+    }
+}
